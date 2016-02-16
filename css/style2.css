@@ -1,0 +1,121 @@
+body
+{
+font-family: arial, helvetica, sans-serif ;
+font-size: 10pt ;
+color: black ;
+background-color: #FFFFFF ;
+}
+
+table {
+border-style:solid;
+border-width:1px; 
+border-color:#FFFFFF;
+border-spacing:0px;
+padding:0px;
+}
+
+table.logo {
+border-style:solid;
+border-width:0px; 
+border-color:#000000;
+border-spacing:0px;
+padding:0px;
+}
+
+table.tableau_site {
+border-style:solid;
+border-width:0px; 
+border-color:#000000;
+border-spacing:0px;
+padding:0px;
+}
+table.tableau_site th { 
+border-style:solid; 
+border-width:1px; 
+border-color:black;
+border-spacing:0px;
+padding:0px;
+}
+table.tableau_site td { 
+border-style:solid; 
+border-width:1px; 
+border-color:#000000;
+border-spacing:0px;
+padding:0px;
+}
+
+a:link { font-weight: blue ; color: black ; }
+a:visited { font-weight: green ; color: black ; }
+a:hover { color: red ; text-decoration: none ;}
+
+
+
+
+#nav, #nav ul {
+background-color:#000000;
+padding: 0;
+margin: 0;
+list-style: none;
+}
+
+#nav a {
+display: block;
+width: 10em;
+}
+
+#nav li {
+background-color:#9ACC11;
+float: left;
+width: 10em;
+}
+
+#nav li ul {
+	position: absolute;
+	width: 10em;
+	left: -999em;
+}
+
+#nav li:hover ul {
+	left: auto;
+}
+
+#nav li:hover ul, #nav li.sfhover ul {
+	left: auto;
+}
+
+
+
+#s_nav, #s_nav ul {
+padding: 0;
+margin: 0;
+list-style: none;
+}
+
+#s_nav a {
+display: block;
+width: 10em;
+}
+
+#s_nav li {
+background-color:#FFFFFF;
+float: left;
+width: 10em;
+}
+
+#s_nav li ul {
+	position: absolute;
+	width: 10em;
+	left: -999em;
+}
+
+#s_nav li:hover ul {
+	left: auto;
+}
+
+#s_nav li:hover ul, #s_nav li.sfhover ul {
+	left: auto;
+}
+
+.menu {
+	width: 3000px;
+}

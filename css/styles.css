@@ -1,0 +1,186 @@
+body
+{
+font-family: arial, helvetica, sans-serif ;
+font-size: 10pt ;
+color: black ;
+background-color: #FFFFFF ;
+}
+
+table{
+border-style:solid;
+border-width:1px; 
+border-color:#9ACC11;
+border-spacing:0px;
+padding:0px;
+}
+
+#test{
+border-style:solid;
+border-width:1px; 
+border-color:#9ACC11;
+border-spacing:0px;
+padding:0px;
+}
+
+table.logo {
+border-style:solid;
+border-width:0px; 
+border-color:#FFFFFF;
+border-spacing:0px;
+padding:0px;
+}
+
+table.tableau_site {
+border-style:solid;
+border-width:0px; 
+border-color:#9ACC11;
+border-spacing:0px;
+padding:0px;
+}
+table.tableau_site th { 
+border-style:solid; 
+border-width:1px; 
+border-color:black;
+background-color:#9ACC11; 
+border-spacing:0px;
+padding:0px;
+}
+table.tableau_site td { 
+border-style:solid; 
+border-width:1px; 
+border-color:#9ACC11;
+border-spacing:0px;
+padding:0px;
+}
+
+table.info_importante td { 
+border-style:solid; 
+border-width:0px; 
+border-color:#FFFFFF;
+border-spacing:0px;
+color: #FF0000;
+padding:0px;
+}
+
+a:link { font-weight: bold ; color: black ; }
+a:visited { font-weight: bold ; color: black ; }
+a:hover { color: red ; text-decoration: none ; }
+
+
+		#principal {
+		    width:100%;
+			background-image:url('../img/header/h_gauche.png');
+			background-repeat: repeat-y;
+            background-color : #9ACC11;
+		}
+        #principal2 {
+			background-image:url('../img/header/h_droit.png');
+			background-repeat: repeat-y;
+            background-position: right;
+		}
+
+		#haut {
+            height:11px;
+            background-image:url('../img/header/h_haut.png');
+		}
+
+		#haut img {
+		    vertical-align:top; /* for ie5*/
+		}
+
+			#coingh {
+                width:11px;
+				height:11px;
+				background-image:url('../img/header/h_angle_haut_gauche.png');
+				float: left;
+			}
+			#coindh {
+                width:11px;
+				height:12px;
+				background-image:url('../img/header/h_angle_haut_droit.png');
+				float: right;
+			}
+		#contenu2 {
+			padding: 0 32px 0 32px;
+		}
+		
+		#bas {
+            height:11px;
+            background-image:url('../img/header/h_bas.png');
+		}
+		#coingb {
+            width:11px;
+			height:11px;
+			background-image:url('../img/header/h_angle_bas_gauche.png');
+			float: left;
+		}
+		#coindb {
+            width:11px;
+			height:11px;
+			background-image:url('../img/header/h_angle_bas_droit.png');
+		    float:right;
+		}
+#nav, #nav ul {
+background-color:#000000;
+padding: 0;
+margin: 0;
+list-style: none;
+}
+
+#nav a {
+display: block;
+width: 18em;
+}
+
+#nav li {
+background-color:#9ACC11;
+float: left;
+width: 18em;
+}
+
+#nav li ul {
+	position: absolute;
+	width: 18em;
+	left: -999em;
+}
+
+#nav li:hover ul {
+	left: auto;
+}
+
+#nav li:hover ul, #nav li.sfhover ul {
+	left: auto;
+}
+
+
+
+#s_nav, #s_nav ul {
+padding: 0;
+margin: 0;
+list-style: none;
+}
+
+#s_nav a {
+display: block;
+width: 18em;
+}
+
+#s_nav li {
+background-color:#FFFFFF;
+float: left;
+width: 18em;
+}
+
+#s_nav li ul {
+	position: absolute;
+	width: 18em;
+	left: -999em;
+}
+
+#s_nav li:hover ul {
+	left: auto;
+}
+
+#s_nav li:hover ul, #s_nav li.sfhover ul {
+	left: auto;
+}
