@@ -3,19 +3,14 @@
 
 <html>
 	<head>
-		<title>Bienvenue entraide V 2.0</title>
-		<META NAME="Copyright" CONTENT="Rocher Xavier ©"> 
+		<title>Bienvenue entraide V 3.0</title>
 		<META NAME="TITLE" CONTENT="Entraide et Partage avec les Sans-Logis">
 		<META NAME="DESCRIPTION" CONTENT="site des inscription pour les domiciliations">
-		<META NAME="KEYWORDS" CONTENT="entraide, partage, sans-logis,domiciliation,association bénévole">
+		<META NAME="KEYWORDS" CONTENT="entraide, partage, sans-logis, domiciliation, association bénévole">
 		<META NAME="LANGUAGE" CONTENT="FR">
 		<META NAME="SUBJECT" CONTENT="Entraide et Partage">
 		<META NAME="ROBOTS" CONTENT="All">
-		<META NAME="AUTHOR" CONTENT="Xavier Rocher" LANG="fr">
-		<META NAME="OWNER" CONTENT="xavierrocher@free.fr">
 		<META NAME="ABSTRACT" CONTENT="site des inscription pour les domiciliations">
-		<META NAME="REVISIT-AFTER" CONTENT="15 DAYS">
-		<META HTTP-EQUIV="REFRESH" CONTENT="600">
 		<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
 		
 		<link rel="stylesheet" type="text/css" href="./css/styles.css">
@@ -28,15 +23,15 @@
 		}
 		if(document.getElementById('nom').value == ""){
 			alert('votre nom est vide !');
-			return 0;			
+			return 0;
 		}
 		if(document.getElementById('prenom').value == ""){
 			alert('votre prénom est vide !');
-			return 0;			
+			return 0;
 		}
 		if(document.getElementById('login').value == ""){
 			alert('votre login est vide !');
-			return 0;			
+			return 0;
 		}
 		return 1;
 	}
@@ -48,21 +43,6 @@
 			<table class="logo" width="157">
 				<tr>
 					<td><img src="./img/logo_test.JPG" alt="logo" height="69">
-					</td>
-					<td valign="top"><img title="réduire la fenêtre de connexion" src="./img/reduire.JPG" onclick="
-							javascript:
-								if(document.getElementById('reduire').value==1){
-									this.src='./img/agrandir.JPG';
-									document.getElementById('reduire').value='0';
-									this.title='agrandir la fenêtre de connexion';
-									document.getElementById('bloc_connexion').style.visibility='hidden';
-								}
-								else{
-									this.src='./img/reduire.JPG';
-									document.getElementById('reduire').value='1';
-									this.title='réduire la fenêtre de connexion';
-									document.getElementById('bloc_connexion').style.visibility='visible';
-								}" alt="agrandir/reduire"><input type="hidden" id="reduire" value="1">
 					</td>
 					<td valign="top">
 						<form action="./login.php" name="connexion" method="post">
@@ -99,7 +79,7 @@
 											<H5><b>CONNEXION</b></H5> 
 										</th>
 										<th>
-											Nom
+											Login
 										</th>
 										<th>
 											Mot de Passe&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -107,7 +87,7 @@
 										</th>
 									</tr>
 									<tr>
-										<td><a href="http://validator.w3.org/check?uri=referer"><img src="http://www.w3.org/Icons/valid-html401" alt="Valid HTML 4.01 Strict" height="31" width="88"></a>
+										<td>
 										</td>
 										<td>
 											<input type="text" name="login" tabindex="1">
@@ -172,13 +152,6 @@ if(isset($_GET['success']) || isset($_SESSION['connected'])){
 	?>
 	<script type="text/javascript">
 		document.getElementById('div_error').innerHTML="<b>Bienvenue <? echo $_SESSION['prenom']." ".$_SESSION['nom']."</b>";?>";
-	</script>
-	<?
-	}
-	else{
-?>
-	<script type="text/javascript">
-		document.getElementById('div_error').innerHTML="N'essayez pas de m'avoir ! je suis mauvais, mais pas à ce point !";
 	</script>
 	<?
 	}
