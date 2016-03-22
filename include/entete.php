@@ -112,7 +112,7 @@ if(isset($_GET['error'])){
 	if($_GET['error'] == 4){
 		?>
 		<script type="text/javascript">
-			document.getElementById('div_error').innerHTML="<font color='#00FF00'>Vous avez &eacute;t&eacute; bien déconnect&eacute;</font>";
+			document.getElementById('div_error').innerHTML="<font color='#00FF00'>Vous avez &eacute;t&eacute; bien d&eacute;connect&eacute;</font>";
 		</script>
 		<?
 	}
