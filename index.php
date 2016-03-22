@@ -27,10 +27,10 @@
                                     document.getElementById('stats').style.visibility='hidden';
                                     document.getElementById('stats').style.display='none';
                                     document.getElementById('params').style.visibility='hidden';
-                                    document.getElementById('params').style.display='none';"
+                                    document.getElementById('params').style.display='none';
                                     document.getElementById('backup').style.visibility='hidden';
                                     document.getElementById('backup').style.display='none';
-                                    document.getElementById('alert').innerHTML = '';>Donn&eacute;es personnelles</a>&nbsp;&nbsp;
+                                    document.getElementById('alert').innerHTML = '';">Donn&eacute;es personnelles</a>&nbsp;&nbsp;
                                     <a href="#" onclick="writediv('');
                                     document.getElementById('sous_menu_data_perso').style.visibility='hidden';
                                     document.getElementById('sous_menu_data_perso').style.display='none';
@@ -41,10 +41,10 @@
                                     document.getElementById('stats').style.visibility='hidden';
                                     document.getElementById('stats').style.display='none';
                                     document.getElementById('params').style.visibility='hidden';
-                                    document.getElementById('params').style.display='none';"
+                                    document.getElementById('params').style.display='none';
                                     document.getElementById('backup').style.visibility='hidden';
                                     document.getElementById('backup').style.display='none';
-                                    document.getElementById('alert').innerHTML = '';>Section Domiciliations</a>&nbsp;&nbsp;
+                                    document.getElementById('alert').innerHTML = '';">Section Domiciliations</a>&nbsp;&nbsp;
                                     <?if($_SESSION['droits'] != "I"){?>
                                     <a href="#" onclick="writediv('');
                                     document.getElementById('users').style.visibility='visible';
@@ -56,10 +56,10 @@
                                     document.getElementById('stats').style.visibility='hidden';
                                     document.getElementById('stats').style.display='none';
                                     document.getElementById('params').style.visibility='hidden';
-                                    document.getElementById('params').style.display='none';"
+                                    document.getElementById('params').style.display='none';
                                     document.getElementById('backup').style.visibility='hidden';
                                     document.getElementById('backup').style.display='none';
-                                    document.getElementById('alert').innerHTML = '';>Utilisateurs</a>&nbsp;&nbsp;
+                                    document.getElementById('alert').innerHTML = '';">Utilisateurs</a>&nbsp;&nbsp;
                                     <?}?>
                                     <?if($_SESSION['droits'] == "T"){?>
                                     <a href="#" onclick="writediv('');
@@ -72,10 +72,10 @@
                                     document.getElementById('users').style.visibility='hidden';
                                     document.getElementById('users').style.display='none';
                                     document.getElementById('params').style.visibility='hidden';
-                                    document.getElementById('params').style.display='none';"
+                                    document.getElementById('params').style.display='none';
                                     document.getElementById('backup').style.visibility='hidden';
                                     document.getElementById('backup').style.display='none';
-                                    document.getElementById('alert').innerHTML = '';>Statistiques</a>&nbsp;&nbsp;
+                                    document.getElementById('alert').innerHTML = '';">Statistiques</a>&nbsp;&nbsp;
                                     <a href="#" onclick="writediv('');
                                     document.getElementById('params').style.visibility='visible';
                                     document.getElementById('params').style.display='block';
@@ -86,10 +86,10 @@
                                     document.getElementById('users').style.visibility='hidden';
                                     document.getElementById('users').style.display='none';
                                     document.getElementById('stats').style.visibility='hidden';
-                                    document.getElementById('stats').style.display='none';"
+                                    document.getElementById('stats').style.display='none';
                                     document.getElementById('backup').style.visibility='hidden';
                                     document.getElementById('backup').style.display='none';
-                                    document.getElementById('alert').innerHTML = '';>Param&egrave;tres</a>&nbsp;&nbsp;
+                                    document.getElementById('alert').innerHTML = '';">Param&egrave;tres</a>&nbsp;&nbsp;
                                     <a href="#" onclick="writediv('');
                                     document.getElementById('backup').style.visibility='visible';
                                     document.getElementById('backup').style.display='block';
@@ -100,10 +100,10 @@
                                     document.getElementById('users').style.visibility='hidden';
                                     document.getElementById('users').style.display='none';
                                     document.getElementById('stats').style.visibility='hidden';
-                                    document.getElementById('stats').style.display='none';"
+                                    document.getElementById('stats').style.display='none';
                                     document.getElementById('params').style.visibility='hidden';
                                     document.getElementById('params').style.display='none';
-                                    document.getElementById('alert').innerHTML = '';>Sauvegarde</a>&nbsp;&nbsp;
+                                    document.getElementById('alert').innerHTML = '';">Sauvegarde</a>&nbsp;&nbsp;
                                     <?}?>
                                     <a href="./disconnect.php">D&eacute;connexion</a>
                                 </div>
@@ -258,6 +258,5 @@
     </div>
 </div>
 <?}?>
-<?
-    include("./include/pied.php");
-?>
+</body>
+</html>

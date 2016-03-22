@@ -1,8 +1,6 @@
 <?
-$link = @mysql_connect("localhost", "root", "root") 
-    or die ('<meta http-equiv="refresh" content="0;url=./index.php?error=2">');//gestion de ma mauvaise connection	
-mysql_select_db("entraide");//accès à la database
-//modification des donnees personnelew
+include("connexion.php");
+//modification des donnees personnelles
 if(isset($_POST['id']) && $_POST['id'] != "")
 {
     $res = true;
