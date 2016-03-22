@@ -263,9 +263,7 @@
                             </div>
                         </td>
                         <td>
-                            <div style="visibility:hidden;display:none;" id="stats">
-                                <?if($_SESSION['droits'] != "I"){?>
-                                <?if($_SESSION['droits'] == "T"){?>
+                            <div id="stats" style="visibility:hidden;display:none;">
                                 <table>
                                     <tr>
                                         <td>
@@ -277,15 +275,10 @@
                                         </td>
                                     </tr>
                                 </table>
-                                <?}}
-                                    else{
-                                    ?><script>writediv('vous n\'avez pas les droits');</script><?
-                                    }?>
                             </div>
                         </td>
                         <td>
-                            <div style="visibility:hidden;display:none;" id="params">
-                                <?if($_SESSION['droits'] != "I"){?>
+                            <div id="params" style="visibility:hidden;display:none;">
                                 <table>
                                     <tr>
                                         <td>
@@ -305,7 +298,6 @@
                                         </td>
                                     </tr>
                                 </table>
-                                <?}?>
                             </div>
                         </td>
                     </tr>
