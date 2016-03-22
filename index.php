@@ -209,15 +209,15 @@
                                     <table>
                                         <tr>
                                             <td>
-                                                <a href="#" onclick="document.getElementById('alert').innerHTML = '';writediv(file('./contenu/sauvegarde_bdd.php'));">Sauvegarde BDD sur Disque</a>
+                                                <a href="#" onclick="document.getElementById('alert').innerHTML = '';writediv(file('./contenu/sauvegarde_bdd.php'));">Sauvegarde BDD sur disque</a>
                                             </td>
                                             <td>||</td>
                                             <td>
-                                                <a href="#" onclick="document.getElementById('alert').innerHTML = '';writediv(file('./contenu/recuperation_bdd.php'));">R&eacute;cup&eacute;ration BDD depuis Disque</a>
+                                                <a href="#" onclick="document.getElementById('alert').innerHTML = '';writediv(file('./contenu/recuperation_bdd.php'));">R&eacute;cup&eacute;ration BDD depuis disque</a>
                                             </td>
                                             <td>||</td>
                                             <td>
-                                                <a href="#" onclick="document.getElementById('alert').innerHTML = '';writediv(file('./contenu/sauvegarde_soft.php'));">Sauvegarde Logiciel USB sur Disque</a>
+                                                <a href="#" onclick="document.getElementById('alert').innerHTML = '';writediv(file('./contenu/sauvegarde_soft.php'));">Sauvegarde logiciel domiciliation sur disque</a>
                                             </td>
                                         </tr>
                                     </table>
@@ -234,8 +234,8 @@
                             <div id="alert">
                                 <?if(isset($_SESSION['message'])&& $_SESSION['message'] != "")
                                     {
-                                    	echo $_SESSION['message'];
-                                    	$_SESSION['message']= "";
+                                        echo $_SESSION['message'];
+                                        $_SESSION['message']= "";
                                     }?>
                             </div>
                         </td>
