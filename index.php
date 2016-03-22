@@ -228,40 +228,7 @@
                 </td>
             </tr>
             <td>
-            <!-- Table pour l'affichage des rŽsultats -->
                 <table>
-                    <tr>
-                        <td>
-                            <div id="sous_menu_data_perso" style="visibility:hidden;display:none;">
-
-                            </div>
-                        </td>
-                        <td>
-                            <div id="section_dom" style="visibility:hidden;display:none;">
-
-                            </div>
-                        </td>
-                        <td>
-                            <div id="users" style="visibility:hidden;display:none;">
- 
-                            </div>
-                        </td>
-                        <td>
-                            <div id="stats" style="visibility:hidden;display:none;">
-                            
-                            </div>
-                        </td>
-                        <td>
-                            <div id="params" style="visibility:hidden;display:none;">
-
-                            </div>
-                        </td>
-                        <td>
-                            <div id="backup" style="visibility:hidden;display:none;">
-
-                            </div>
-                        </td>
-                    </tr>
                     <tr>
                         <td>
                             <div id="alert">
