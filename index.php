@@ -2,7 +2,7 @@
 	include("./include/entete.php");
 ?>
 
-<?if(isset($_SESSION['id'])){?>
+<?if(isset($_SESSION['id']) && $_SESSION['id'] != ""){?>
 <div id="principal" width="600px">
     <div id="principal2" width="600px">
 
