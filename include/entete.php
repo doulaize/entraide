@@ -1,7 +1,7 @@
 <?session_start();?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 
-<html>
+<html lang="fr">
 	<head>
 		<title>Bienvenue entraide V 3.0</title>
 		<META NAME="TITLE" CONTENT="Entraide et Partage avec les Sans-Logis">
@@ -14,29 +14,7 @@
 		<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
 		
 		<link rel="stylesheet" type="text/css" href="./css/styles.css">
-		
-<script>
-	function test_saisie_modif_data(){
-		if(document.getElementById('mdp').value != document.getElementById('confirm_mdp').value){
-			alert('vous avez mal retapé votre mot de passe !');
-			return 0;
-		}
-		if(document.getElementById('nom').value == ""){
-			alert('votre nom est vide !');
-			return 0;
-		}
-		if(document.getElementById('prenom').value == ""){
-			alert('votre prénom est vide !');
-			return 0;
-		}
-		if(document.getElementById('login').value == ""){
-			alert('votre login est vide !');
-			return 0;
-		}
-		return 1;
-	}
-</script>	
-		
+		<script type="text/javascript" src="./js/default.js"></script>
 	</head>
 	<body>
 		<script type="text/javascript" src="./js/wz_dragdrop.js"></script>
