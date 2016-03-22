@@ -23,7 +23,7 @@ if(isset($_POST['login']) && isset($_POST['mdp'])){//si on a passe en parametre 
 	
 		if(isset($_SESSION['id']))
 		{
-			header("Location: ./index.php?success");
+			header("Location: ./index.php?success_".$_SESSION['droits']);
 		}
 		else
 		{
