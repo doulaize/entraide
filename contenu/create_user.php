@@ -7,7 +7,7 @@
 	<table>
 		<tr>
 			<th>
-				nom
+				Nom
 			</th>
 			<td>
 				<input type="text" name="nom" id="nom" value="">
@@ -15,7 +15,7 @@
 		</tr>
 		<tr>
 			<th>
-				pr&eacute;nom
+				Pr&eacute;nom
 			</th>
 			<td>
 				<input type="text" name="prenom" id="prenom" value="">
@@ -24,7 +24,7 @@
 		</tr>
 		<tr>
 			<th>
-				login
+				Login
 			</th>
 			<td>
 				<input type="text" name="login" id="login" value="">
@@ -32,7 +32,7 @@
 		</tr>
 		<tr>
 			<th>
-				mot de passe
+				Mot de passe
 			</th>
 			<td>
 				<input type="password" name="mdp" id="mdp" value="">
@@ -40,7 +40,7 @@
 		</tr>
 		<tr>
 			<th>
-				confirmation du mot de passe
+				Confirmation du mot de passe
 			</th>
 			<td>
 				<input type="password" name="confirm_mdp" id="confirm_mdp" value="">
@@ -48,7 +48,7 @@
 		</tr>
 		<tr>		
 			<th>
-				droits
+				Droits
 			</th>
 			<td>
 				<?echo $resultat;?>
@@ -56,7 +56,7 @@
 		</tr>
 		<tr>		
 			<th>
-				droits signature
+				Droits Signature
 			</th>
 			<td>
 				<select name="droit_signature" id="droit_signature">
@@ -68,7 +68,7 @@
 
 		<tr>		
 			<th>
-				valider
+				Valider
 			</th>
 			<td align="center">
 				<input type="button" name="valider" id="valider" value="Valider" 
@@ -78,7 +78,8 @@
 						}
 						else{
 							return 0;
-						}">
+						}"
+				>
 			</td>
 		</tr>
 	</table>

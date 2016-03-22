@@ -16,7 +16,6 @@
 		<script type="text/javascript" src="./js/default.js"></script>
 	</head>
 	<body>
-		<script type="text/javascript" src="./js/wz_dragdrop.js"></script>
 			<table class="logo" width="157">
 				<tr>
 					<td><img src="./img/logo_test.JPG" alt="logo" height="69">

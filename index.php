@@ -286,7 +286,8 @@
 			<div id="alert">
 			<?if(isset($_SESSION['message'])&& $_SESSION['message'] != "")
 			{
-				echo "<font color='#00FF00'>Vos données personnelles on bien été modifiées.</font>";$_SESSION['message'] = "";
+				echo $_SESSION['message'];
+				$_SESSION['message']= "";
 			}?>
 			</div>
 		</td>
