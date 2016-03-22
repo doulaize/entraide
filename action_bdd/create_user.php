@@ -14,7 +14,7 @@ if(isset($_POST))
         while ($row = mysql_fetch_array($traitement, MYSQL_NUM))
         {
             $res = false;
-            $error = "Le login existe déjà. Choisissez un autre";
+            $error = "Le login existe d&eacute;j&agrave;. Choisissez un autre";
         }
     }
 
@@ -29,6 +29,7 @@ if(isset($_POST))
         $SQL .= ")";
         $res = mysql_query($SQL);
     }
+
     session_start();
     if($res == true)
     {
@@ -38,7 +39,6 @@ if(isset($_POST))
     {
         $_SESSION['message'] = "<font color='#0000FF'>Probl&egrave;me &agrave; la cr&eacute;ation d'utilisateur.   ".$error."</font>";
     }
-    
     header('Location:../index.php');
 }
 ?>
