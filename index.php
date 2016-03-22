@@ -2,7 +2,32 @@
 	include("./include/entete.php");
 ?>
 
-<?if(isset($_SESSION['id']) && $_SESSION['id'] != ""){?>
+<script type="text/javascript">
+//TODO : Voir si on peut decaler le code ci-dessous dans js/default.js sans tout casser
+	if (window.attachEvent) window.attachEvent("onload", sfHover);
+	if (window.attachEvent) window.attachEvent("onload", sfHover2);
+
+	function writediv(texte)
+	{
+		document.getElementById('contenu').innerHTML = texte;
+	}
+
+	function file(fichier)
+	{
+		if(window.XMLHttpRequest) // FIREFOX
+			xhr_object = new XMLHttpRequest(); 
+		else if(window.ActiveXObject) // IE
+			xhr_object = new ActiveXObject("Microsoft.XMLHTTP"); 
+		else 
+			return(false); 
+		xhr_object.open("GET", fichier, false); 
+		xhr_object.send(null); 
+		if(xhr_object.readyState == 4) return(xhr_object.responseText);
+		else return(false);
+	}
+</script>
+
+<?if(isset($_SESSION['id'])){?>
 <div id="principal" width="600px">
     <div id="principal2" width="600px">
 
@@ -16,11 +41,76 @@
 	<tr>
 		<td colspan="6">
 <div>
-	<a href="#" onclick="writediv('');document.getElementById('sous_menu_data_perso').style.visibility='visible';document.getElementById('sous_menu_data_perso').style.display='block';document.getElementById('section_dom').style.visibility='hidden';document.getElementById('section_dom').style.display='none';document.getElementById('debut').style.visibility='hidden';document.getElementById('debut').style.display='none';document.getElementById('users').style.visibility='hidden';document.getElementById('users').style.display='none';document.getElementById('stats').style.visibility='hidden';document.getElementById('stats').style.display='none';document.getElementById('params').style.visibility='hidden';document.getElementById('params').style.display='none';">Donn&eacute;es personnelles</a>&nbsp;&nbsp;
-	<a href="#" onclick="writediv('');document.getElementById('sous_menu_data_perso').style.visibility='hidden';document.getElementById('sous_menu_data_perso').style.display='none';document.getElementById('section_dom').style.visibility='visible';document.getElementById('section_dom').style.display='block';document.getElementById('debut').style.visibility='hidden';document.getElementById('debut').style.display='none';document.getElementById('users').style.visibility='hidden';document.getElementById('users').style.display='none';document.getElementById('stats').style.visibility='hidden';document.getElementById('stats').style.display='none';document.getElementById('params').style.visibility='hidden';document.getElementById('params').style.display='none';">Section Domiciliations</a>&nbsp;&nbsp;
-	<a href="#" onclick="writediv('');document.getElementById('users').style.visibility='visible';document.getElementById('users').style.display='block';document.getElementById('section_dom').style.visibility='hidden';document.getElementById('section_dom').style.display='none';document.getElementById('debut').style.visibility='hidden';document.getElementById('debut').style.display='none';document.getElementById('sous_menu_data_perso').style.visibility='hidden';document.getElementById('sous_menu_data_perso').style.display='none';document.getElementById('stats').style.visibility='hidden';document.getElementById('stats').style.display='none';document.getElementById('params').style.visibility='hidden';document.getElementById('params').style.display='none';">Utilisateurs</a>&nbsp;&nbsp;
-	<a href="#" onclick="writediv('');document.getElementById('stats').style.visibility='visible';document.getElementById('stats').style.display='block';document.getElementById('section_dom').style.visibility='hidden';document.getElementById('section_dom').style.display='none';document.getElementById('debut').style.visibility='hidden';document.getElementById('debut').style.display='none';document.getElementById('sous_menu_data_perso').style.visibility='hidden';document.getElementById('sous_menu_data_perso').style.display='none';document.getElementById('users').style.visibility='hidden';document.getElementById('users').style.display='none';document.getElementById('params').style.visibility='hidden';document.getElementById('params').style.display='none';">Statistiques</a>&nbsp;&nbsp;
-	<a href="#" onclick="writediv('');document.getElementById('params').style.visibility='visible';document.getElementById('params').style.display='block';document.getElementById('section_dom').style.visibility='hidden';document.getElementById('section_dom').style.display='none';document.getElementById('debut').style.visibility='hidden';document.getElementById('debut').style.display='none';document.getElementById('sous_menu_data_perso').style.visibility='hidden';document.getElementById('sous_menu_data_perso').style.display='none';document.getElementById('users').style.visibility='hidden';document.getElementById('users').style.display='none';document.getElementById('stats').style.visibility='hidden';document.getElementById('stats').style.display='none';">Param&egrave;tres</a>&nbsp;&nbsp;
+	<a href="#" onclick="writediv('');
+		document.getElementById('sous_menu_data_perso').style.visibility='visible';
+		document.getElementById('sous_menu_data_perso').style.display='block';
+		document.getElementById('section_dom').style.visibility='hidden';
+		document.getElementById('section_dom').style.display='none';
+		document.getElementById('debut').style.visibility='hidden';
+		document.getElementById('debut').style.display='none';
+		document.getElementById('users').style.visibility='hidden';
+		document.getElementById('users').style.display='none';
+		document.getElementById('stats').style.visibility='hidden';
+		document.getElementById('stats').style.display='none';
+		document.getElementById('params').style.visibility='hidden';
+		document.getElementById('params').style.display='none';">Donn&eacute;es personnelles</a>&nbsp;&nbsp;
+		
+	<a href="#" onclick="writediv('');
+		document.getElementById('sous_menu_data_perso').style.visibility='hidden';
+		document.getElementById('sous_menu_data_perso').style.display='none';
+		document.getElementById('section_dom').style.visibility='visible';
+		document.getElementById('section_dom').style.display='block';
+		document.getElementById('debut').style.visibility='hidden';
+		document.getElementById('debut').style.display='none';
+		document.getElementById('users').style.visibility='hidden';
+		document.getElementById('users').style.display='none';
+		document.getElementById('stats').style.visibility='hidden';
+		document.getElementById('stats').style.display='none';
+		document.getElementById('params').style.visibility='hidden';
+		document.getElementById('params').style.display='none';">Section Domiciliations</a>&nbsp;&nbsp;
+		
+	<a href="#" onclick="writediv('');
+		document.getElementById('users').style.visibility='visible';
+		document.getElementById('users').style.display='block';
+		document.getElementById('section_dom').style.visibility='hidden';
+		document.getElementById('section_dom').style.display='none';
+		document.getElementById('debut').style.visibility='hidden';
+		document.getElementById('debut').style.display='none';
+		document.getElementById('sous_menu_data_perso').style.visibility='hidden';
+		document.getElementById('sous_menu_data_perso').style.display='none';
+		document.getElementById('stats').style.visibility='hidden';
+		document.getElementById('stats').style.display='none';
+		document.getElementById('params').style.visibility='hidden';
+		document.getElementById('params').style.display='none';">Utilisateurs</a>&nbsp;&nbsp;
+		
+	<a href="#" onclick="writediv('');
+		document.getElementById('stats').style.visibility='visible';
+		document.getElementById('stats').style.display='block';
+		document.getElementById('section_dom').style.visibility='hidden';
+		document.getElementById('section_dom').style.display='none';
+		document.getElementById('debut').style.visibility='hidden';
+		document.getElementById('debut').style.display='none';
+		document.getElementById('sous_menu_data_perso').style.visibility='hidden';
+		document.getElementById('sous_menu_data_perso').style.display='none';
+		document.getElementById('users').style.visibility='hidden';
+		document.getElementById('users').style.display='none';
+		document.getElementById('params').style.visibility='hidden';
+		document.getElementById('params').style.display='none';">Statistiques</a>&nbsp;&nbsp;
+		
+	<a href="#" onclick="writediv('');
+		document.getElementById('params').style.visibility='visible';
+		document.getElementById('params').style.display='block';
+		document.getElementById('section_dom').style.visibility='hidden';
+		document.getElementById('section_dom').style.display='none';
+		document.getElementById('debut').style.visibility='hidden';
+		document.getElementById('debut').style.display='none';
+		document.getElementById('sous_menu_data_perso').style.visibility='hidden';
+		document.getElementById('sous_menu_data_perso').style.display='none';
+		document.getElementById('users').style.visibility='hidden';
+		document.getElementById('users').style.display='none';
+		document.getElementById('stats').style.visibility='hidden';
+		document.getElementById('stats').style.display='none';">Param&egrave;tres</a>&nbsp;&nbsp;
+		
 	<a href="./disconnect.php">d&eacute;connexion</a>
 </div>
 		</td>
@@ -34,7 +124,8 @@
 			<table>
 				<tr>
 					<td>
-						<a href="#" onclick="document.getElementById('alert').innerHTML = '';writediv(file('./contenu/modif_data.php?id=<?echo $_SESSION['id']?>'));">Modification donn&eacute;es</a>
+						<a href="#" onclick="document.getElementById('alert').innerHTML = '';
+							writediv(file('./contenu/modif_data.php?id=<?echo $_SESSION['id']?>'));">Modification donn&eacute;es</a>
 					</td>
 				</tr>
 			</table>
