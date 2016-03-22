@@ -18,7 +18,15 @@ if(isset($_POST['login']) && isset($_POST['mdp'])){//si on a passe en parametre 
 	$_SESSION['prenom'] = $row['prenom'];
 	$_SESSION['link'] = $link;
 	$_SESSION['connected'] = true;
-
-	header("Location: ./index.php?success");
+	
+	if(isset($_SESSION['id']))
+	{
+		header("Location: ./index.php?success");
+	}
+	else
+	{
+		echo '<meta http-equiv="refresh" content="0;url=./index.php?error=2">';
+		header("Location: ./index.php");
+	}
 }
 ?>
