@@ -2,31 +2,6 @@
 	include("./include/entete.php");
 ?>
 
-<script type="text/javascript">
-//TODO : Voir si on peut decaler le code ci-dessous dans js/default.js sans tout casser
-	if (window.attachEvent) window.attachEvent("onload", sfHover);
-	if (window.attachEvent) window.attachEvent("onload", sfHover2);
-
-	function writediv(texte)
-	{
-		document.getElementById('contenu').innerHTML = texte;
-	}
-
-	function file(fichier)
-	{
-		if(window.XMLHttpRequest) // FIREFOX
-			xhr_object = new XMLHttpRequest(); 
-		else if(window.ActiveXObject) // IE
-			xhr_object = new ActiveXObject("Microsoft.XMLHTTP"); 
-		else 
-			return(false); 
-		xhr_object.open("GET", fichier, false); 
-		xhr_object.send(null); 
-		if(xhr_object.readyState == 4) return(xhr_object.responseText);
-		else return(false);
-	}
-</script>
-
 <?if(isset($_SESSION['id'])){?>
 <div id="principal" width="600px">
     <div id="principal2" width="600px">
@@ -111,7 +86,7 @@
 		document.getElementById('stats').style.visibility='hidden';
 		document.getElementById('stats').style.display='none';">Param&egrave;tres</a>&nbsp;&nbsp;
 		
-	<a href="./disconnect.php">d&eacute;connexion</a>
+	<a href="./disconnect.php">D&eacute;connexion</a>
 </div>
 		</td>
 	</tr>
