@@ -12,7 +12,6 @@
 		<META NAME="ROBOTS" CONTENT="All">
 		<META NAME="ABSTRACT" CONTENT="site des inscription pour les domiciliations">
 		<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
-		
 		<link rel="stylesheet" type="text/css" href="./css/styles.css">
 		<script type="text/javascript" src="./js/default.js"></script>
 	</head>
@@ -99,7 +98,7 @@ if(isset($_GET['error'])){
 	if($_GET['error'] == 2){
 		?>
 		<script type="text/javascript">
-			document.getElementById('div_error').innerHTML="<font color='#FF0000'>Vos identifiants et/ou mots de passe sont incorrects, veuillez réessayer</font>";
+			document.getElementById('div_error').innerHTML="<font color='#FF0000'>Vos identifiants et/ou mots de passe sont incorrects, veuillez r&eacute;essayer</font>";
 		</script>
 		<?
 	}	
@@ -113,7 +112,7 @@ if(isset($_GET['error'])){
 	if($_GET['error'] == 4){
 		?>
 		<script type="text/javascript">
-			document.getElementById('div_error').innerHTML="<font color='#00FF00'>Vous avez été bien déconnecté</font>";
+			document.getElementById('div_error').innerHTML="<font color='#00FF00'>Vous avez &eacute;t&eacute; bien déconnect&eacute;</font>";
 		</script>
 		<?
 	}
