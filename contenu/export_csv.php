@@ -179,36 +179,8 @@ $fp=fopen($CheminFichier,"w"); // Ouverture du fichier avec le mode écriture
 fwrite($fp,$ContenuFichier); // Ceci ajoutera ou crira le contenu "texte ..." dans le fichier "le_fichier.txt"
 fclose($fp);
 
-function NomFichierSeul($CheminFichier){
-     if(!empty($CheminFichier)){
-     $pos = strrpos($CheminFichier, "\\"); //donne position du dernier \
-     return substr($CheminFichier,$pos+1); //coupe aprs cette position
-}
-}
- function TailleFichier($fichier) {
-      $taillefichier = 0;
-    
-     if(file_exists($fichier)){
-          $taillefichier = filesize($fichier)/1000;
-     } else {
-          $taillefichier = 0;
-     }
-     return $taillefichier;
-}
-
-function ExtensionFichier($fichier) {
-      $extension = '';
-    
-     if(file_exists($fichier)){
-          $extension = strstr($fichier,".");
-     } else {
-          $extension = "?";
-     }
-     return $extension;
-}
-
-$NomFichierSeul = NomFichierSeul($CheminFichier);
-$extension = ExtensionFichier($NomFichierSeul);
+$NomFichierSeul = basename($CheminFichier);
+$extension = pathinfo($CheminFichier, PATHINFO_EXTENSION);
 
 switch($extension){
      case "csv": $typefichier="application/csv"; break;

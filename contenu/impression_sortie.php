@@ -53,7 +53,7 @@ elseif($_GET["action"] == "sortir"){
 $file = select_file($_GET["nom_fichier"]);
 $file_name=mysql_fetch_array($file,ENT_QUOTES);
 
-$CheminFichier = "/Users/Raf/Documents/Code/web/Php/entraide/SORTIES/".$file_name["nom_fichier"];
+$CheminFichier = "../SORTIES/".$file_name["nom_fichier"];
 $nouveau_fichier = $CheminFichier."_temp.rtf";
 touch($CheminFichier);
 copy($CheminFichier, $nouveau_fichier);
@@ -209,45 +209,11 @@ $fp=fopen($nouveau_fichier,"w"); // Ouverture du fichier avec le mode ecriture
 fwrite($fp,$contenu); // Ceci ajoutera ou crira le contenu "texte ..." dans le fichier "le_fichier.txt"
 fclose($fp);
 $lStr = strlen($contenu);
-echo "<script type='text/javascript'>alert('nouveau fichier $nouveau_fichier len $lStr ');</script>";
-//echo $contenu;
 
-function NomFichierSeul($CheminFichier){
-     if(!empty($CheminFichier)){
-     $pos = strrpos($CheminFichier, "\\"); //donne position du dernier \
-     return substr($CheminFichier,$pos+1); //coupe aprs cette position
-}
-}
- function TailleFichier($fichier) {
-      $taillefichier = 0;
-    
-     if(file_exists($fichier)){
-          $taillefichier = filesize($fichier)/1000;
-     } else {
-          $taillefichier = 0;
-     }
-     return $taillefichier;
-}
+$FichierTmp = basename($nouveau_fichier);
+$extension = pathinfo($nouveau_fichier, PATHINFO_EXTENSION);
 
-function ExtensionFichier($fichier) {
-	echo "<script type='text/javascript'>alert('extension $fichier');</script>";
-	$extension = '';
-	if(file_exists("/Users/Raf/Documents/Code/web/Php/entraide/SORTIES/".$fichier))
-	{
-		$pos = strrpos($fichier, "."); //donne position du dernier \
-		$extension = substr($fichier,$pos+1);
-	}
-	else
-	{
-		$extension = "?";
-	}
-	return $extension;
-}
-
-$NomFichierSeul = NomFichierSeul($CheminFichier."_temp.rtf");
-$extension = ExtensionFichier($NomFichierSeul);//echo $extension;exit();
-
-switch($extension){//echo $extension;exit();
+switch($extension){
      case "rtf": $typefichier="application/rtf"; break;
      default: $typefichier="application/force-download"; break;
 } 	
@@ -259,12 +225,12 @@ header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
 header("Cache-Control: public");
 header("Content-Description: File Transfer");
 header("Content-Type: ".$typefichier);
-$header="Content-Disposition: attachment; filename=".$NomFichierSeul.";";
+$header="Content-Disposition: attachment; filename=".$FichierTmp.";";
 header($header );
 header("Content-Transfer-Encoding: binary");
-header("Content-Length: ".filesize($CheminFichier."_temp.rtf"));
-@readfile($CheminFichier."_temp.rtf");
-unlink($CheminFichier."_temp.rtf"); // Ceci supprimera le fichier
+header("Content-Length: ".filesize($nouveau_fichier));
+@readfile($nouveau_fichier);
+unlink($nouveau_fichier); // Ceci supprimera le fichier
 exit;
 }
 ?>
