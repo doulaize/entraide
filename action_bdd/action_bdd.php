@@ -585,4 +585,15 @@ function del_nationalite($id){
 	return $resultat;
 }
 
+function show_tables(){
+    $SQL = "SHOW TABLES";
+    $resultat = mysql_query($SQL);
+    return $resultat;
+}
+
+function desc_table($table){
+    $SQL = "DESC ".$table;
+    $resultat = mysql_query($SQL);
+    return $resultat;
+}
 ?>

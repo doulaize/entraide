@@ -33,43 +33,43 @@ foreach($tab as $key => $value){
 	if($value == "1")
 		$entete .= "ID;";
 	if($value == "2")
-		$entete .= "Nouveau numéro;";
+		$entete .= "Nouveau numro;";
 	if($value == "3")
-		$entete .= "Ancien numéro;";
+		$entete .= "Ancien numro;";
 	if($value == "4")
-		$entete .= "date d'entrée;";
+		$entete .= "Date d'entre;";
 	if($value == "5")
-		$entete .= "date dernier certificat;";
+		$entete .= "Date dernier certificat;";
 	if($value == "6")
-		$entete .= "radie?;";
+		$entete .= "Radie?;";
 	if($value == "7")
-		$entete .= "Civilité;";
+		$entete .= "Civilit;";
 	if($value == "8")
 		$entete .= "Nom;";
 	if($value == "9")
-		$entete .= "statut;";
+		$entete .= "Statut;";
 	if($value == "10")
-		$entete .= "Prénom;";
+		$entete .= "Prnom;";
 	if($value == "11")
-		$entete .= "date de naissance;";
+		$entete .= "Date de naissance;";
 	if($value == "12")
-		$entete .= "lieu de naissance;";
+		$entete .= "Lieu de naissance;";
 	if($value == "13")
-		$entete .= "pays;";
+		$entete .= "Pays;";
 	if($value == "14")
-		$entete .= "departement;";
+		$entete .= "Departement;";
 	if($value == "15")
-		$entete .= "nationalite;";
+		$entete .= "Nationalite;";
 	if($value == "16")
-		$entete .= "nature document identite;";
+		$entete .= "Nature document identite;";
 	if($value == "17")
-		$entete .= "numero document identite;";
+		$entete .= "Numero document identite;";
 	if($value == "18")
-		$entete .= "contact;";
+		$entete .= "Contact;";
 	if($value == "19")
-		$entete .= "ancienne nationalité;";
+		$entete .= "ancienne nationalit;";
 	if($value == "20")
-		$entete .= "ancien pays;";
+		$entete .= "Ancien pays;";
 	if($value == "21")
 		$entete .= "motif de radiation;";
 	if($value == "22")

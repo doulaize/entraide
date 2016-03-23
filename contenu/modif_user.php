@@ -8,12 +8,12 @@ if(!isset($_GET['id_user']))
 <br><font color="#FF0000">Attention ! vous ne pouvez modifier que les utilisateurs ayant des droits inf&eacute;rieurs aux votres</font></b><br><br>
 <table>
 	<tr>
-		<th>modifier</th>
-		<th>nom</th>
-		<th>pr&eacute;nom</th>
-		<th>login</th>
-		<th>mot de passe</th>
-		<th>droits</th>
+		<th>Modifier</th>
+		<th>Nom</th>
+		<th>Pr&eacute;nom</th>
+		<th>Login</th>
+		<th>Mot de passe</th>
+		<th>Droits</th>
 	</tr>
 	<?while($resultat = mysql_fetch_array($traitement, MYSQL_ASSOC)){?>
 	<tr>

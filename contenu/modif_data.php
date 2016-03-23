@@ -8,7 +8,7 @@
 	<table>
 		<tr>
 			<th>
-				nom
+				Nom
 			</th>
 			<td>
 				<input type="text" name="nom" id="nom" value="<? echo $resultat['nom']?>">
@@ -16,7 +16,7 @@
 		</tr>
 		<tr>
 			<th>
-				pr&eacute;nom
+				Pr&eacute;nom
 			</th>
 			<td>
 				<input type="text" name="prenom" id="prenom" value="<? echo $resultat['prenom']?>">
@@ -25,7 +25,7 @@
 		</tr>
 		<tr>
 			<th>
-				login
+				Login
 			</th>
 			<td>
 				<input type="text" name="login" id="login" value="<? echo $resultat['login']?>">
@@ -33,7 +33,7 @@
 		</tr>
 		<tr>
 			<th>
-				mot de passe
+				Mot de passe
 			</th>
 			<td>
 				<input type="password" name="mdp" id="mdp" value="<? echo $resultat['mdp']?>">
@@ -41,7 +41,7 @@
 		</tr>
 		<tr>
 			<th>
-				confirmation du mot de passe
+				Confirmation du mot de passe
 			</th>
 			<td>
 				<input type="password" name="confirm_mdp" id="confirm_mdp" value="<? echo $resultat['mdp']?>">
@@ -49,7 +49,7 @@
 		</tr>
 		<tr>		
 			<th>
-				droits
+				Droits
 			</th>
 			<td>
 				<table class="info_importante">
